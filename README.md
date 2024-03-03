@@ -1,10 +1,3 @@
-###############################
-# Author: Boni Yeamin        #
-# Date:                      #
-# This is Ansible LAMP Stack Project       #
-# Version : v1               #
-###############################
-
 # Ansible LAMP Stack
 
 This Ansible project automates the setup of a LAMP (Linux, Apache, MySQL, PHP) stack on multiple servers. It provides a structured approach to configure and manage the LAMP stack, making it easy to deploy and maintain web applications.
