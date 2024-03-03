@@ -1,0 +1,25 @@
+
+
+###############################
+# Author : Boni Yeamin        #
+# Date:                       #
+# This is LAMP Project        #
+# Version : v1                #
+###############################
+
+
+# ansible-lamp-stack/roles/php/tasks/main.yml
+---
+- name: Install PHP and required modules
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - php
+    - php-mysql
+    - php-curl
+    - php-gd
+    - php-mbstring
+    - php-xml
+    - libapache2-mod-php

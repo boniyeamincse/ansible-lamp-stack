@@ -1,0 +1,26 @@
+###############################
+# Author : Boni Yeamin        #
+# Date:                       #
+# This is LAMP Project        #
+# Version : v1                #
+###############################
+
+# ansible-lamp-stack/roles/apache/tasks/main.yml
+---
+- name: Install Apache
+  apt:
+    name: apache2
+    state: present
+    update_cache: yes
+
+- name: Enable Apache service
+  service:
+    name: apache2
+    enabled: yes
+    state: started
+
+- name: Copy Apache configuration file
+  template:
+    src: apache.conf.j2
+    dest: /etc/apache2/apache2.conf
+  notify: Restart Apache

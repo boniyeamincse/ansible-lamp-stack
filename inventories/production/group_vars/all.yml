@@ -1,0 +1,13 @@
+# ansible-lamp-stack/inventories/production/group_vars/all.yml
+
+
+###############################
+# Author : Boni Yeamin        #
+# Date:                       #
+# This is LAMP Project        #
+# Version : v1                #
+###############################
+
+mysql_root_password: "your_root_password"
+mysql_user: "your_mysql_user"
+mysql_password: "your_mysql_password"

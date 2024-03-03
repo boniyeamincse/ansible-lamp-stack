@@ -1,0 +1,30 @@
+###############################
+# Author : Boni Yeamin        #
+# Date:                       #
+# This is LAMP Project        #
+# Version : v1                #
+###############################
+
+
+# ansible-lamp-stack/roles/mysql/tasks/main.yml
+---
+- name: Install MySQL server
+  apt:
+    name: mysql-server
+    state: present
+    update_cache: yes
+
+- name: Set MySQL root password
+  mysql_user:
+    name: root
+    password: "{{ mysql_root_password }}"
+    host: localhost
+    state: present
+
+- name: Create MySQL user
+  mysql_user:
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_password }}"
+    host: localhost
+    priv: "*.*:ALL"
+    state: present

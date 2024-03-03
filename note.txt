@@ -1,0 +1,35 @@
+ansible-lamp-stack/
+│
+├── inventories/
+│   ├── production/
+│   │   ├── hosts
+│   │   └── group_vars/
+│   │       └── all.yml
+│   └── staging/
+│       ├── hosts
+│       └── group_vars/
+│           └── all.yml
+│
+├── playbooks/
+│   └── lamp-stack.yml
+│
+├── roles/
+│   ├── apache/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   ├── templates/
+│   │   │   └── apache.conf.j2
+│   │   └── defaults/
+│   │       └── main.yml
+│   ├── mysql/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   └── defaults/
+│   │       └── main.yml
+│   └── php/
+│       ├── tasks/
+│       │   └── main.yml
+│       └── defaults/
+│           └── main.yml
+│
+└── ansible.cfg
